@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <script async src="js/js-gpt.js"></script>
+	 <script>
+     window.googletag = window.googletag || {cmd: []};
+     var gptAdSlots = [];
+     googletag.cmd.push(function() {
+      var bottomAdSizes = googletag.sizeMapping()
+		.addSize([1024, 768], [728, 90])
+		.addSize([980, 690], [728, 90])
+		.addSize([640, 480], [300, 250])
+		.addSize([0, 0], [300, 250]).build();
+
+		gptAdSlots[0] = googletag.defineSlot('/23169694/simpkb-portal-login', [[728, 90], [300, 250]], 'div-gpt-ad-1639542026038-0')
+		.defineSizeMapping(bottomAdSizes).addService(googletag.pubads());
+       googletag.pubads().enableSingleRequest();
+       googletag.enableServices();
+     });
+   </script>
+
+	 <link rel="icon" type="img/png" href="favicons/logo kejaksaan.png">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <title>Portal Layanan Program GTK Kemendikbud</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* background-color: #f1f1f1; */
+            background-image: url("https://cdn.siap.id/s3/UI-UX/bg-login-kemendikbud-white2.png");
+            background-size: cover;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment: fixed;
+        }
+        .warna-utama {
+            background-color: #2196F3;
+        }
+
+		  .warna-utama {
+            background-color: red;
+        }
+        .warna-success {
+            background-color: #28a745;
+        }
+        .warna-footer {
+            color: grey;
+            position: relative;;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            margin-top: auto;
+
+        }
+        .aksen {
+            position: fixed;
+            margin-left: -22px;
+            margin-top: 10px;
+            width: 5px;
+        }
+        .card {
+            border: none;
+        }
+        .card2 {
+            display: block;
+            top: 0px;
+            background-color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+            border: none;
+            min-height: 150px;
+        }
+        .card2:hover {
+            transition: all 0.2s ease-out;
+            box-shadow: 0px 8px 15px #e6e4e4;
+            border: 1px solid none;
+            background-color: white;
+            border-left: 5px solid #2196F3;
+        }
+        .card2:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: #00838d;
+            border-radius: 32px;
+            transition: transform 1s ease-in-out;
+
+        }
+        .card2:hover:after {
+            transition: transform 1s ease-in;
+        }
+        .card2:hover h5 {
+            color: #2196F3;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+        }
+
+        .card2:hover p {
+            color: #000000;
+        }
+
+
+        p{
+            color: #626262;
+        }
+
+        .img-fluid{
+            min-width: 40px;
+        }
+        a{
+            text-decoration: none !important;
+            color: inherit;
+        }
+        h5{
+            font-size: 1.2rem;
+        }
+        .btn-group-fab {
+          position: fixed;
+          width: 50px;
+          height: auto;
+          right: 20px; bottom: 20px;
+        }
+        .btn-group-fab div {
+          position: relative; width: 100%;
+          height: auto;
+        }
+        .btn-group-fab .btn {
+          position: absolute;
+          bottom: 0;
+          border-radius: 50%;
+          display: block;
+          margin-bottom: 4px;
+          width: 40px; height: 40px;
+          margin: 4px auto;
+        }
+        .btn-group-fab .btn-main {
+          width: 50px; height: 50px;
+          right: 50%; margin-right: -25px;
+          z-index: 9;
+        }
+
+		  /* ribbon demo */
+        .ribbon {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        position: fixed;
+        z-index: 100000;
+        }
+        .ribbon::before,
+        .ribbon::after {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        display: block;
+        border: 5px solid #cc0000;
+        }
+        .ribbon span {
+        position: absolute;
+        display: block;
+        width: 225px;
+        padding: 15px 0;
+        background-color: #cc0000;;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        color: #fff;
+        font: 700 18px/1 'Lato', sans-serif;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        text-transform: uppercase;
+        text-align: center;
+        }
+
+        /* top left*/
+          .ribbon-top-left {
+            top: -10px;
+            left: -10px;
+          }
+          .ribbon-top-left::before,
+          .ribbon-top-left::after {
+            border-top-color: transparent;
+            border-left-color: transparent;
+          }
+          .ribbon-top-left::before {
+            top: 0;
+            right: 0;
+          }
+          .ribbon-top-left::after {
+            bottom: 0;
+            left: 0;
+          }
+          .ribbon-top-left span {
+            right: -25px;
+            top: 30px;
+            transform: rotate(-45deg);
+          }
+
+          .ads {
+            height: 90px;
+          }
+
+          @media  only screen and (max-width: 768px) {
+             .ads {
+                 width: 320px;
+                 height: 250px;
+             }
+         }
+         @media  only screen and (min-width: 768px) {
+	         .ads {
+              width: 728px;
+              height: 90px;
+           }
+         }
+    </style>
+</head>
+
+<body>
+	    <section class="mb-3">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-md-12">
+                    <img src="images/logo kejaksaan.png" height="100" class=" mt-5 " alt="">
+                    <h2 class="text-black mt-3">Portal Layanan Kejaksaan Negeri Blora</h2>
+                    <h5 class="text-black font-weight-normal mb-5">Silahkan Isi Survei Dengan Memilih Layanan Dibawah Ini</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mt-3">
+                    <div class="card card2 h-100">
+                        <div class="card-body">
+                        <div class="row">
+                             <div class="col-4">
+                                 <img src="images/tilang.jpg" class="img-fluid" alt="Logo">
+                             </div>
+                             <div class="col-8">
+                                 <h5 class="card-title">Layanan Tilang</h5>
+                                 <p class="card-text">Pelayanan Tilang Kejaksaan Negeri Blora</p>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://reformasibirokrasi.kejaksaan.go.id/skm/0d404e69ab9c8a6b96343360a21e492b5a5872350d0510df1ddb2f6fb6f62d037f667df898e4025d9f8fa251ce0c1b725095b0020f81d4c414bc49a8182bafcbdANVT8tuyyTY0lRhaRtqP879~4LUKA--/0043cff49ea16a8212d5d1ceef6fc70a8e355c5ce065786a0db87aadce500761fdf6da775d1807a98556ffa72579f7d09d100ff7263fd63511755d5bdd7e33ba8zr~.J2cx2wNjrBrHQhnmu~atBs-" class="btn btn-sm btn-outline-success"><i class="mdi mdi-login"></i> Isi Survei</a>
+                             </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+
+					 <div class="col-md-6 mt-3">
+                    <div class="card card2 h-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="images/jadwal_sidang.jpg" class="img-fluid" alt="Logo">
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title">Layanan Besuk Tahanan</h5>
+                                    <p class="card-text">Layanan yang diberikan untuk besuk/berkunjung yang dikeluarkan kepada keluarga terdakwa atau pihak lain yang berkepentingan untuk membesuk atau mengunjungi tahanan di rumah tahanan Negara.</p>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://reformasibirokrasi.kejaksaan.go.id/skm/0d404e69ab9c8a6b96343360a21e492b5a5872350d0510df1ddb2f6fb6f62d037f667df898e4025d9f8fa251ce0c1b725095b0020f81d4c414bc49a8182bafcbdANVT8tuyyTY0lRhaRtqP879~4LUKA--/f26b5bb905af5ebfabbebacad2daf6569ae17b8b1ddb8a90ddbf241e659e5d22dc64dc15b0d5dcccdf9d9cd4cfdd2bc7fc5fb11410c4ec02a6e1a71c7cf6432eqnXxtTuwMwC2MNhIvLAnlq7JGrQ-" class="btn btn-sm btn-outline-success"><i class="mdi mdi-login"></i> Masuk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-3">
+                    <div class="card card2 h-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="images/cms_publik.jpg" class="img-fluid" alt="Logo">
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title">CMS Publik</h5>
+                                    <p class="card-text">Sistem pelayanan perkembangan perkara Kejaksaan Republik Indonesia</p>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://cms-publik.kejaksaan.go.id/" class="btn btn-sm btn-outline-success"><i class="mdi mdi-login"></i> Masuk</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mt-3">
+                    <div class="card card2 h-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="images/tilang.jpg" class="img-fluid" alt="Logo">
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title">
+                                        Pelayanan Tilang
+                                    </h5>
+                                    <p class="card-text">Pelayanan pengambilan tilang Kejaksaan Negeri Manado</p>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://tilang.kejaksaan.go.id/" class="btn btn-sm btn-outline-success"><i class="mdi mdi-login"></i> Masuk</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mt-3">
+                    <div class="card card2 h-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="images/bb.jpg" class="img-fluid" alt="Logo">
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title">Pelayanan Barang Bukti </h5>
+                                    <p class="card-text">Pelayanan pengembalian barang bukti Kejaksaan Negeri Manado</p>
+                                    <a target="_blank" rel="noopener noreferrer" href="#" class="btn btn-sm btn-outline-success"><i class="mdi mdi-login"></i> Masuk</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="modal fade" id="segeraHadir" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="segeraHadirLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="segeraHadirLabel">Program baru</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+
+                        
+                        <div class="modal-footer">
+
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Saya mengerti</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--
+                <div class="col-md-6 mt-3">
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                    <div class="card card2">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 ">
+                                    <img src="https://paspor-gtk.belajar.kemdikbud.go.id/casgpo/asset/img/logo-kemdikbud.png"
+                                        class="img-fluid" alt="Logo">
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title">BANPEM S1 <span
+                                            class="badge badge-pill warna-utama text-white font-weight-normal">Baru</span>
+                                    </h5>
+                                    <p class="card-text">Program yang bertujuan untuk untuk meningkatkan
+                                        kualitas sumber daya pengajar yang belum memiliki
+                                        pengalaman belajar sampai dengan jenjang S1 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div> -->
+
+            </div>
+            <div class="btn-group-fab" role="group" aria-label="FAB Menu">
+              <div>
+                <button type="button" class="btn btn-main btn-warning has-tooltip" data-placement="left" title="Menu" onclick="window.open('#')">
+                  <i class="mdi mdi-help text-white"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center warna-footer mt-5 align-content-end flex-wrap">
+        <small>&copy;2022, Kejaksaan Negeri Manado.</small>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/umd-popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/js-bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+		$(function() {
+
+		});
+  </script>
+</body>
+
+</html><html><p>
+d</p></html>
